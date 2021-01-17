@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Payment Gateway Integration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" integrity="sha512-f8mUMCRNrJxPBDzPJx3n+Y5TC5xp6SmStstEfgsDXZJTcxBakoB5hvPLhAfJKa9rCvH+n3xpJ2vQByxLk4WP2g==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&family=Trade+Winds&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Courgette&family=Redressed&family=Sofia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/payment.css" />
+</head>
+<body>
+    <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-11">
+            <div class="card card0 rounded-0">
+                <div class="row">
+                    <div class="col-md-5 d-md-block d-none p-0 box">
+                        <div class="card rounded-0 border-0 card1" id="bill">
+                            <br>
+                            <br>
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src= "images/payment.svg" width="100%">
+                                </div>
+                            </div>
+                            
+                            <br>
+                            <br>
+                            <br>
+
+              <form action="confirmation_mail.php" method="post" name="form" class="form-card p-4 pl-5">
+                            <div class="row" id="opened">
+                                <div class="col-12 red-bg">
+                                    <p class = "text-white" style = "font-family: Sofia; font-size: 20px;">Your trust is our first priority, stay protected and safe!</p>
+                                   <em class="bill-date" id="total-label" style = "font-family: Courgette; font-size: 20px;">(Donate for a cause)</em>
+                                </div>
+                                <br>
+                                <div class="col-12">
+                                  <p id="confirm" style = "font-size: 17px;"><em>You will receive an email confirmation shortly!</em></p>
+                              </div>
+                            </div>
+                          
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12 p-0 box">
+                        <div class="card rounded-0 border-0 card2" id="paypage">
+                            <div class="form-card">
+                                <div class="radio-group ml-md-4">
+                                    <div class='radio selected d-none d-md-inline-block' data-value="credit"><img src="images/paypal.png" width="130px" height="75px"></div>
+                                    <div class='radio d-none d-md-inline-block' data-value="paypal"><img src="images/credit_card.png" width="130px" height="75px"></div>
+                                    <div class='radio d-none d-md-inline-block' data-value="netbanking"><img src="images/nb.svg" width="140px" height="75px"></div>
+
+                                    <div class='radio selected d-md-none' data-value="credit"><img src="images/paypal.png" width="110px" height="70px"></div>
+                                    <div class='radio d-md-none' data-value="paypal"><img src="images/credit_card.png" width="110px" height="70px"></div>
+                                    <div class='radio d-md-none' data-value="netbanking"><img src="images/nb.svg" width="110px" height="70px"></div>
+
+                                  </div> <label class="pay">Name on Card</label> <input type="text" id="cr_name" name="holdername" placeholder="Aditya Anand">
+                                <div class="row">
+                                    <div class="col-8 col-md-6"> <label class="pay">Card Number</label> <input type="text" name="cardno" id="cr_no" placeholder="0000-0000-0000-0000" minlength="19" maxlength="19"> </div>
+                                    <div class="col-4 col-md-6"> <label class="pay">CVV</label> <input type="password" name="cvcpwd" placeholder="&#9679;&#9679;&#9679;" class="placeicon" minlength="3" maxlength="3"> </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12"> <label class="pay">Expiration Date</label> </div>
+                                    <div class="col-md-12"> <input type="text" name="exp" id="exp" placeholder="MM/YY" minlength="5" maxlength="5"> </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-4"> <label class="pay">Mail To</label> <input type="text" name="mail_to" id="mail_to" placeholder="Aditya Anand"></div>
+                                  <div class="col-md-8"><label class="pay">Recipient email</label><br> <input type="email" id="recipient_mail" name="email" placeholder="aditya@gmail.com"></div>
+                                </div>
+                                <div class="row">
+                                  <label class = "col-form-label col-12 col-md-5" for = "amount"><p style="font-size: 130%;">Donation Amount <i><img src="images/rupee.svg" width="18%"></i></p></label>
+                                  <div class="col-12 col-md-7"> <input type="number" name="amount" id="amount" placeholder="Amount(Rs.)" class="placeicon amount-input"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 text-center"> <input type="submit" id="submit" name="submit" value="DONATE"  class="btn btn-info placeicon" onclick = "purchase()"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="payment.js"></script>
+    <script type="text/javascript" src="purchase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+</body>
+</html>

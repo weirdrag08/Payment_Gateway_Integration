@@ -1,0 +1,123 @@
+.row-header{
+    margin: 0px auto;
+    padding: 0px auto;
+}
+
+.row-content{
+    margin: 0px auto;
+    padding: 50px 0px;
+    /* border-bottom: 1px ridge; */
+    min-height: 400px;
+}
+
+.footer{
+    background: #263238;
+    margin: 0px auto;
+    padding: 20px 0px;
+    color: #FFFFFF;
+}
+
+.jumbotron{
+    margin: 0px auto;
+    padding: 92px 30px; 
+    background: #263238;
+    color: #FFFFFF;
+}
+
+.address{
+    font-size: 80%;
+    margin: 0px;
+    color: #0F0F0F;
+}
+
+body{
+    padding: 65px 0px 0px 0px;
+    z-index: 0;
+    color: #FFFFFF;
+    background: #000000;
+}
+
+.navbar-dark{
+    background-color: #F44336;
+}
+
+p{
+    font-size: 1.1em;
+}
+
+.fade-in {
+animation: fadeIn ease 2s;
+-webkit-animation: fadeIn ease 2s;
+-moz-animation: fadeIn ease 2s;
+-o-animation: fadeIn ease 2s;
+-ms-animation: fadeIn ease 2s;
+}
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+.key-features-heading{
+    padding: 15px 0px;
+    border-top: 1px ridge;
+    margin-top: 60px;
+}
+
+.gpu-type-heading{
+    padding: 15px 0px;
+    margin-top: 5px;
+}
+
+.myaccordian{
+    color: #000000;
+}
+
+.company_logo{
+    margin-left: 60px;
+}
+
+#overview_back{
+    cursor: not-allowed;
+}
+
+
+  svg text {
+    stroke: #ffffff;
+    opacity: 0.9;
+    font-size: 100px;
+    font-weight: 650;
+    stroke-width: 5;
+    position: absolute;
+    animation: textAnimate 4s infinite alternate;
+  }
+  
+  @keyframes textAnimate {
+    0% {
+      stroke-dasharray: 0 50%;
+      stroke-dashoffset: 20%;
+      fill: #F44336;
+      stroke: #FFFFFF;
+    }
+    100% {
+      stroke-dasharray: 50% 0;
+      stroke-dashoffset: -20%;
+      fill: #FFFFFF;
+      stroke: #FFFFFF;
+    }
+  }
+  
