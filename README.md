@@ -1,6 +1,8 @@
 # Payment_gateway_integration
 Building a payment gateway, to ensure that the transactions made by the users are processed and a confirmation receipt is sent to them.
-Hosting Server => 000Webhost '\n'
+Hosting Server => 000Webhost
+
+
 Website => https://website0408.000webhostapp.com/
 Mail sending account => acountsender8@gmail.com
 Mail receiving account => acountreceiver8@gmail.com
