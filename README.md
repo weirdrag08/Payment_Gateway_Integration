@@ -31,7 +31,7 @@ Javascript => Interactive UI
 jquery => For controlling the activites of modals and all other Bootstrap components in the website.
 
 
-Local Storage => Storing user data in the form strings and JSON
+Local Storage => Storing user data in the form of strings and JSON
 
 
 PHP => All the stuff related to sending and receiving emails.
